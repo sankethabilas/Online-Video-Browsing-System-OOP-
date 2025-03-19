@@ -1,4 +1,4 @@
-/*CSS VARIABLES*/
+/*------------CSS VARIABLES-------------------*/
 :root {
     --primary: #7b2cbf;
     --primary-hover: #9d4edd;
@@ -17,11 +17,12 @@ body{
     line-height: 1.6;
 }
 
-/*NAVBAR STYLES*/
+/*-----------------NAVBAR STYLES-----------------------*/
 
 .navbar{
     background-color: rgb(15,15, 26, 0.95);
     padding: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .navbar-brand i{
@@ -55,6 +56,7 @@ body{
     border-radius: 3px;
 }
 
+/*-------------search bar--------------------*/
 .search-form{
     width: 100%;
     max-width: 400px;
@@ -81,11 +83,33 @@ body{
     color: white;
 }
 
+/*--------------login and signup buttons----------------*/
+
 .login-btn, .signup-btn {
     padding: 0.5rem 1.2rem;
     border-radius: 50px;
     font-weight: 500;
     transition: all 0.3s ease;
+    color: white;
+}
+
+.login-btn{
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.login-btn:hover{
+    background-color: var(--primary);
+    color: white;
+}
+
+.signup-btn{
+    background-color: var(--primary);
+    color: white;
+}
+
+.signup-btn:hover{
+   background-color: var(--primary-hover);
 }
 
 
