@@ -9,3 +9,83 @@
     --text-secondary: #b8b8d4;
     --border-color: #2a2a4a;
 }
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/*NAVBAR STYLES*/
+
+.navbar{
+    background-color: rgb(15,15, 26, 0.95);
+    padding: 0.8rem;
+}
+
+.navbar-brand i{
+    color: var(--primary);
+    font-size: 1.8rem;
+}
+
+.nav-item a{
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-item a:hover{
+    color: var(--primary);
+}
+
+.nav-item .nav-link {
+    padding: 0.5rem 1rem !important;
+    position: relative;
+}
+
+.nav-item .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1.5px;
+    left: 1rem;
+    right: 1rem;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 3px;
+}
+
+.search-form{
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-input{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.6rem 1rem;
+    border-radius: 50px 0 0 50px;
+}
+
+.search-btn{
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    padding: 0 1.2rem;
+}
+
+.search-btn:hover{
+    background-color: var(--primary-hover);
+    color: white;
+}
+
+.login-btn, .signup-btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+
