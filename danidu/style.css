@@ -12,7 +12,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: var(--dark-bg);
+    /*background-color: var(--dark-bg);*/
     color: var(--text-primary);
     line-height: 1.6;
 }
@@ -110,6 +110,29 @@ body{
 
 .signup-btn:hover{
    background-color: var(--primary-hover);
+}
+
+
+/*--------HERO SECTION WITH SLIDER-----------*/
+
+.hero-section{
+    padding: 0;
+    padding-top: 20px;
+}
+
+.slider-item{
+    height: 500px;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.slider-content{
+    position: absolute;
+    bottom: 30px;
+    padding-left: 40px;
+
 }
 
 
