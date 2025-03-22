@@ -113,3 +113,59 @@ body{
 }
 
 
+/*--------HERO SECTION WITH SLIDER-----------*/
+
+.hero-section{
+    padding: 0;
+    padding-top: 20px;
+}
+
+.slider-item{
+    height: 500px;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.slider-content{
+    position: absolute;
+    bottom: 30px;
+    padding-left: 40px;
+}
+
+.slider-content h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-bottom: 0.6rem;
+}
+
+.slider-content p{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.slider-btn{
+    background-color: var(--secondary);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    border: none;
+}
+
+.slider-badge{
+    background-color: red;
+    color: white;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+
