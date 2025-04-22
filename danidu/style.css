@@ -212,9 +212,9 @@ body{
 
 /*--------TRENDING VIDEOS SECTION-----------*/
 
-.trending-videos{
+/*.trending-videos{
     margin-top: 2.5rem;
-}
+}*/
 
 .video-card{
     background-color: var(--card-bg);
@@ -322,3 +322,6 @@ body{
 .video-views span{
     margin-right: 0.5rem;
 }
+
+/*TOP (POPULAR) CREATORS SECTION*/
+
