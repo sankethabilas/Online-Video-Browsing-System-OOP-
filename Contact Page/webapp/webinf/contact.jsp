@@ -15,7 +15,7 @@
             <h1>Frequently Asked Questions</h1>
             <p>Our virtual assistants are experienced professionals ready to manage your administrative and creative tasks.</p>
             <button class="btn" onclick="toggleReadMore()">Read more</button>
-            
+
             <!-- Hidden paragraph -->
             <div id="hiddenContent" class="hidden-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor nisl eget arcu luctus, a hendrerit nisi varius.</p>
@@ -41,17 +41,14 @@
         </section>
 
         <section class="faq">
-    <h2>Your Questions Answered</h2>
-    <form action="contactservlet" >
-        <button type="submit">View all</button>
-        </form>
-    <c:forEach var="faq" items="${faqs}">
-        <div class="question" onclick="toggleAnswer(this)">
-            <p>${faq.msg}</p>
-            <div class="answer">Answer: ${faq.reply}</div>
-        </div>
-    </c:forEach>
-</section>
+            <h2>Your Questions Answered</h2>
+            <c:forEach var="faq" items="${faqs}">
+                <div class="question" onclick="toggleAnswer(this)">
+                    <p>${faq.msg}</p>
+                    <div class="answer">Answer: ${faq.reply}</div>
+                </div>
+            </c:forEach>
+        </section>
 
         <section class="contact">
             <h2>Contact Us</h2>
@@ -60,8 +57,7 @@
                 <p>Email: info@videobrowsing.com</p>
                 <p>Telephone: +94771234567</p>
             </div>
-           <form method="post" action="contactservlet" id="contactForm" onsubmit="return validateForm()">
-
+            <form method="post" action="contactservlet" id="contactForm" onsubmit="return validateForm()">
                 <input type="text" class="aa" placeholder="First Name" name="fname" required>
                 <input type="text" class="aa" placeholder="Last Name" name="lname" required><br>
                 <input type="email" class="bb" placeholder="Email" name="email" required><br>
@@ -75,47 +71,55 @@
             <p>Spend less while getting the best virtual assistant services!</p>
             <button class="btn">Get started</button>
         </footer>
+
         <form action="adminservlet" method="post">
-        <button type="submit">All Customers</button>
+            <button type="submit">All Customers</button>
         </form>
-        
     </div>
-	<script>
-	function validateForm() {
-		const form = document.getElementById("contactForm");
 
-		const fname = form["fname"].value.trim();
-		const lname = form["lname"].value.trim();
-		const email = form["email"].value.trim();
-		const phone = form["phone"].value.trim();
-		const msg = form["msg"].value.trim();
+    <script>
+        function validateForm() {
+            const form = document.getElementById("contactForm");
 
-		const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		const phonePattern = /^0[0-9]{9}$/;
-		const namePattern = /^[A-Za-z]+$/;
+            const fname = form["fname"].value.trim();
+            const lname = form["lname"].value.trim();
+            const email = form["email"].value.trim();
+            const phone = form["phone"].value.trim();
+            const msg = form["msg"].value.trim();
 
-		if (fname === "" || lname === "" || email === "" || phone === "" || msg === "") {
-		    alert("Please fill out all fields.");
-		    return false;
-		}
-		
-		if (!namePattern.test(fname) || !namePattern.test(lname)) {
-		    alert("First and Last Name should contain only letters without numbers or symbols.");
-		    return false;
-		}
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phonePattern = /^0[0-9]{9}$/;
+            const namePattern = /^[A-Za-z]+$/;
 
-		if (!emailPattern.test(email)) {
-		    alert("Please enter a valid email address.");
-		    return false;
-		}
+            if (fname === "" || lname === "" || email === "" || phone === "" || msg === "") {
+                alert("Please fill out all fields.");
+                return false;
+            }
 
-		if (!phonePattern.test(phone)) {
-		   alert("Please enter a valid 10-digit phone number starting with 0.");
-		   return false;
-		}
+            if (!namePattern.test(fname) || !namePattern.test(lname)) {
+                alert("First and Last Name should contain only letters without numbers or symbols.");
+                return false;
+            }
 
-		return true; // Form is valid
-	}
-	</script>
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid 10-digit phone number starting with 0.");
+                return false;
+            }
+
+            return true;
+        }
+
+        // Auto-redirect to contactservlet on page load (only if still on contact.jsp)
+        window.onload = function () {
+            if (window.location.pathname.endsWith("/contact.jsp")) {
+                window.location.href = "contactservlet";
+            }
+        };
+    </script>
 </body>
 </html>
