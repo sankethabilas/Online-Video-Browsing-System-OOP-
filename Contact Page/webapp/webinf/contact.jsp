@@ -13,32 +13,33 @@
     <div class="container">
         <header>
             <h1>Frequently Asked Questions</h1>
-            <p>Our virtual assistants are experienced professionals ready to manage your administrative and creative tasks.</p>
+            <p>We’ve gathered the most common inquiries to help you quickly find answers about our services, features, and support. Additionally, any questions you've submitted through our Contact Us form can also be found here once they've been answered</p>
             <button class="btn" onclick="toggleReadMore()">Read more</button>
 
             <!-- Hidden paragraph -->
             <div id="hiddenContent" class="hidden-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor nisl eget arcu luctus, a hendrerit nisi varius.</p>
+                <p>Our service provides users with a seamless and reliable platform to explore and access high-quality content tailored to their needs. Whether you're looking for expert support, easy navigation, or fast performance, we are committed to delivering an exceptional user experience. Our dedicated team ensures regular updates and responsive assistance to keep everything running smoothly</p>
             </div>
         </header>
 
         <section class="how-it-works">
-            <h2>How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <span class="number">1</span>
-                    <p>Tell us about your ideal assistant.</p>
-                </div>
-                <div class="step">
-                    <span class="number">2</span>
-                    <p>Meet and approve your assistant.</p>
-                </div>
-                <div class="step">
-                    <span class="number">3</span>
-                    <p>Launch and track.</p>
-                </div>
-            </div>
-        </section>
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="step">
+            <span class="number">1</span>
+            <p>Got a question? Just send it our way through the Contact Us form.</p>
+        </div>
+        <div class="step">
+            <span class="number">2</span>
+            <p>Wait for our friendly support team to review your message.</p>
+        </div>
+        <div class="step">
+            <span class="number">3</span>
+            <p>You'll receive a private email response, with permission asked before adding it as public in FAQ section.</p>
+        </div>
+    </div>
+</section>
+
 
         <section class="faq">
             <h2>Your Questions Answered</h2>
@@ -110,6 +111,7 @@
                 alert("Please enter a valid 10-digit phone number starting with 0.");
                 return false;
             }
+            alert("Your concern has been sent successfully ! ");
 
             return true;
         }

@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: clamp(1.2rem, 2vw, 2rem);
-  background-color: #f4f4f4;
+  background-color: rgb(0, 0, 0);
 }
 
 .container {
@@ -42,22 +42,31 @@ body {
 
 header {
   grid-area: header;
-  background-color: #fff;
+  background-color: #1e1e1e; /*deep dark gray*/
   text-align: center;
   padding: 20px;
+  color: #ffffff; /*white*/
+}
+header p {
+  color: #b3b3b3;
 }
 
 .how-it-works {
   grid-area: how-it-works;
-  background-color: #e7e7e7;
+  background-color: #1e1e1e; /*deep dark gray*/
   padding: 20px;
   text-align: center;
+  color: #ffffff; /*white*/
 }
 
 .steps {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+}
+.number {
+  color: white;
+  font-size: 2em;
 }
 
 @media screen and (min-width: 600px) {
@@ -67,34 +76,45 @@ header {
 }
 
 .step {
-  background-color: #fff;
+  background-color: rgba(75, 75, 75, 0.662); /*middle dark gray*/
   padding: 20px;
   border-radius: 5px;
   text-align: center;
+  color: #b3b3b3;
 }
 
 .faq {
   grid-area: faq;
-  background-color: #fff;
+  background-color: #1e1e1e; /*deep dark gray*/
   padding: 20px;
+  color: #ffffff; /*white*/
 }
 
 .question {
-  border: 1px solid #ccc;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgba(75, 75, 75, 0.662);
   margin: 10px 0;
   padding: 10px;
   cursor: pointer;
+}
+.question:hover,
+.step:hover,
+.hidden-content:hover {
+  background-color: #302f2f;
 }
 
 .answer {
   display: none;
   margin-top: 10px;
-  color: #371bc2;
+  color: #b3b3b3;
+  font-size: 0.9em;
 }
 
 .contact {
   grid-area: contact;
-  background-color: #e7e7e7;
+  background-color: #302f2f;
+  color: #ffffff; /*white*/
   padding: 10px;
   text-align: center;
   padding-bottom: 50px;
@@ -114,19 +134,23 @@ form textarea {
 
 footer {
   grid-area: footer;
-  background-color: #333;
-  color: white;
+  background-color: #1e1e1e;
+  color: #ffffff; /*white*/
   text-align: center;
-  padding: 20px;
+  padding: 60px;
 }
 
-.btn {
-  background-color: #6a5acd;
+button {
+  background-color: #8a2be2;
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 1em;
   cursor: pointer;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: #7b1fa2;
 }
 .aa {
   width: 31%;
@@ -140,7 +164,7 @@ footer {
   overflow: hidden;
   transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
   padding: 0;
-  background-color: #e7e7e7;
+  background-color: rgba(75, 75, 75, 0.662); /*middle dark gray*/
   margin-top: 10px;
 }
 
@@ -148,4 +172,78 @@ footer {
 .show {
   max-height: 200px; /* Adjust height based on content */
   padding: 15px;
+}
+.admin-body {
+  font-size: 1rem;
+}
+.admin-panel,
+.faq-panel {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 20px 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.admin-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+.admin-table tr {
+  background-color: #444;
+  color: #ffffff;
+}
+
+.admin-table tr:hover {
+  background-color: #555;
+}
+
+.update-form textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.action-form {
+  display: inline;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.faq-btn {
+  background-color: #2ecc71;
+}
+
+.faq-btn:hover {
+  background-color: #27ae60;
+}
+
+.remove-btn {
+  background-color: #f39c12;
+}
+
+.remove-btn:hover {
+  background-color: #e67e22;
 }

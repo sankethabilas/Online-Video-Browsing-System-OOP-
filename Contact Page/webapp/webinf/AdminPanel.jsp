@@ -5,12 +5,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="assets/styles.css">
 </head>
+<body class="admin-body">
 
-<h2>Admin Panel</h2>
-<table border="1">
-    <tr><th>ID</th><th>Message</th><th>Reply</th><th>Actions</th></tr>
+<h2 class="section-title">Admin Panel</h2>
+<table border="1" class="admin-table">
+    <tr>
+        <th>ID</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Phone</th><th>Message</th><th>Reply</th><th>Actions</th>
+    </tr>
     <c:forEach var="msg" items="${messages}">
     <tr>
         <td>${msg.id}</td>
@@ -20,36 +24,34 @@
         <td>${msg.phone}</td>
         <td>${msg.msg}</td>
         <td>
-                <form method="post" action="adminservlet">
-                    <input type="hidden" name="action" value="updateReply"/>
-                    <input type="hidden" name="id" value="${msg.id}"/>
-                    <textarea name="reply">${msg.reply}</textarea>
-                    <button type="submit">Update</button>
-                </form>
-            </td>
+            <form method="post" action="adminservlet" class="admin-form">
+                <input type="hidden" name="action" value="updateReply"/>
+                <input type="hidden" name="id" value="${msg.id}"/>
+                <textarea name="reply" class="admin-textarea">${msg.reply}</textarea><br>
+                <button type="submit" class="btn">Update</button>
+            </form>
+        </td>
         <td>
-            <!-- Delete Button -->
-            <form action="adminservlet" method="post" style="display:inline;">
+            <form action="adminservlet" method="post" style="display:inline;" class="admin-form">
                 <input type="hidden" name="action" value="delete">
                 <input type="hidden" name="id" value="${msg.id}">
-                <button type="submit">Delete</button>
+                <button type="submit" class="btn">Delete</button>
             </form>
-
-            <!-- Send to FAQ Button -->
-            <form action="adminservlet" method="post" style="display:inline;">
+			<br><br>
+            <form action="adminservlet" method="post" style="display:inline;" class="admin-form">
                 <input type="hidden" name="action" value="sendToFaq">
                 <input type="hidden" name="id" value="${msg.id}">
-                <button type="submit">Send to FAQ</button>
+                <button type="submit" class="btn">Send to FAQ</button>
             </form>
         </td>
     </tr>
-</c:forEach>
+    </c:forEach>
 </table>
 
-<hr>
+<hr class="divider">
 
-<h2>FAQ Section</h2>
-<table border="1">
+<h2 class="section-title">FAQ Section</h2>
+<table border="1" class="admin-table">
     <tr>
         <th>ID</th>
         <th>First Name</th>
@@ -64,18 +66,19 @@
             <td>${faq.msg}</td>
             <td>${faq.reply}</td>
             <td>
-                <!-- Remove from FAQ Button -->
-                <form action="adminservlet" method="post" style="display:inline;">
+                <form action="adminservlet" method="post" style="display:inline;" class="admin-form">
                     <input type="hidden" name="action" value="removeFromFaq">
                     <input type="hidden" name="id" value="${faq.id}">
-                    <button type="submit">Remove</button>
+                    <button type="submit" class="btn">Remove</button>
                 </form>
             </td>
         </tr>
     </c:forEach>
 </table>
-<form action="contactservlet" >
-        <button type="submit">Go to contact</button>
-        </form>
+
+<form action="contactservlet" class="admin-form">
+    <button type="submit" class="btn">Go to contact</button>
+</form>
+
 </body>
 </html>
