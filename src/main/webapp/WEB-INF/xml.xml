@@ -27,6 +27,38 @@
         <url-pattern>/UserLoginServlet</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>InsertServlet</servlet-name>
+        <servlet-class>AdminPackage.InsertServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InsertServlet</servlet-name>
+        <url-pattern>/InsertServlet</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>contactservlet</servlet-name>
+        <servlet-class>FAQPackage.contactservlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>contactservlet</servlet-name>
+        <url-pattern>/contactservlet</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>InsertVideoServlet</servlet-name>
+        <servlet-class>VideoBrowsing.InsertVideoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InsertVideoServlet</servlet-name>
+        <url-pattern>/InsertVideoServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    
     
 
     <welcome-file-list>

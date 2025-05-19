@@ -7,6 +7,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn-icons-png.flaticon.com/512/3659/3659784.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn-icons-png.flaticon.com/512/3659/3659784.png">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3659/3659784.png">
     <title>Online Video Browsing System</title>
 
     <!-- Bootstrap CSS -->
@@ -46,12 +50,17 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Categories
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Games</a></li>
-                  <li><a class="dropdown-item" href="#">Entertainment</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Multiplayer</a></li>
+                <ul class="dropdown-menu bg-dark">
+                  <li><a class="dropdown-item" href="#">Action Games</a></li>
+                  <li><a class="dropdown-item" href="#">FPS Games</a></li>
+                  <li><a class="dropdown-item" href="#">RPG Games</a></li>
+                  <li><a class="dropdown-item" href="#">Strategy Games</a></li>
+                  <li><a class="dropdown-item" href="#">Sports Games</a></li>
+                  <li><a class="dropdown-item" href="#">Racing Games</a></li>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.jsp">Contact Us</a>
               </li>
               <!--<li class="nav-item">
                 <a class="nav-link" href="#">Live</a>
@@ -238,101 +247,99 @@
             <div class="col-md-6 col-lg-3 mb-4">
                 <div class="video-card">
                     <div class="video-thumbnail">
-                        <img src="images/trending 1.png" alt="video thumbnail image">
-                        <span class="video-duration">45.12</span>
+                        <img src="images/trending 1.png" alt="Call of Duty thumbnail">
+                        <span class="video-duration">45:12</span>
                         <div class="play-hover"><i class="fas fa-play"></i></div>
                     </div>
                     <div class="video-info">
                         <div class="channel-logo">
-                            <img src="images/channel logo 1.jpg" alt="Channel-logo">
+                            <img src="images/channel logo 1.jpg" alt="CODbuddy channel">
                         </div>
                         <div class="video-details">
-                            <h5 class="video-title">Call of Duty: Black Ops 6</h5>
+                            <h5 class="video-title">Call of Duty: Black Ops 6 - Ultimate Guide</h5>
                             <p class="channel-name">CODbuddy</p>
                             <div class="video-views">
                                 <span>245K views</span>
                                 <span>•</span>
-                                <span>1 days ago</span>
+                                <span>1 day ago</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
 
-                <div class="col-md-6 col-lg-3 mb-4">
-                  <div class="video-card">
-                      <div class="video-thumbnail">
-                          <img src="images/trending 1.png" alt="video thumbnail image">
-                          <span class="video-duration">45.12</span>
-                          <div class="play-hover"><i class="fas fa-play"></i></div>
-                      </div>
-                      <div class="video-info">
-                          <div class="channel-logo">
-                              <img src="images/channel logo 1.jpg" alt="Channel-logo">
-                          </div>
-                          <div class="video-details">
-                              <h5 class="video-title">Call of Duty: Black Ops 6</h5>
-                              <p class="channel-name">CODbuddy</p>
-                              <div class="video-views">
-                                  <span>245K views</span>
-                                  <span>•</span>
-                                  <span>1 days ago</span>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-
-                  <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="video-card">
-                        <div class="video-thumbnail">
-                            <img src="images/trending 1.png" alt="video thumbnail image">
-                            <span class="video-duration">45.12</span>
-                            <div class="play-hover"><i class="fas fa-play"></i></div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="images/trending 2.png" alt="Elden Ring thumbnail">
+                        <span class="video-duration">32:45</span>
+                        <div class="play-hover"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <div class="channel-logo">
+                            <img src="images/channel logo 2.jpg" alt="SoulsMaster channel">
                         </div>
-                        <div class="video-info">
-                            <div class="channel-logo">
-                                <img src="images/channel logo 1.jpg" alt="Channel-logo">
-                            </div>
-                            <div class="video-details">
-                                <h5 class="video-title">Call of Duty: Black Ops 6</h5>
-                                <p class="channel-name">CODbuddy</p>
-                                <div class="video-views">
-                                    <span>245K views</span>
-                                    <span>•</span>
-                                    <span>1 days ago</span>
-                                </div>
+                        <div class="video-details">
+                            <h5 class="video-title">Elden Ring: All Boss Strategies</h5>
+                            <p class="channel-name">SoulsMaster</p>
+                            <div class="video-views">
+                                <span>189K views</span>
+                                <span>•</span>
+                                <span>2 days ago</span>
                             </div>
                         </div>
                     </div>
-                  </div>
+                </div>
+            </div>
 
-                  <div class="col-md-6 col-lg-3 mb-4">
-                      <div class="video-card">
-                          <div class="video-thumbnail">
-                              <img src="images/trending 1.png" alt="video thumbnail image">
-                              <span class="video-duration">45.12</span>
-                              <div class="play-hover"><i class="fas fa-play"></i></div>
-                          </div>
-                          <div class="video-info">
-                              <div class="channel-logo">
-                                  <img src="images/channel logo 1.jpg" alt="Channel-logo">
-                              </div>
-                              <div class="video-details">
-                                  <h5 class="video-title">Call of Duty: Black Ops 6</h5>
-                                  <p class="channel-name">CODbuddy</p>
-                                  <div class="video-views">
-                                      <span>245K views</span>
-                                      <span>•</span>
-                                      <span>1 days ago</span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-   
-              </div>
-          </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="images/trending 3.png" alt="FIFA 24 thumbnail">
+                        <span class="video-duration">28:15</span>
+                        <div class="play-hover"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <div class="channel-logo">
+                            <img src="images/channel logo 3.jpg" alt="ProGamer channel">
+                        </div>
+                        <div class="video-details">
+                            <h5 class="video-title">FIFA 24: Pro Tips & Tricks</h5>
+                            <p class="channel-name">ProGamer</p>
+                            <div class="video-views">
+                                <span>156K views</span>
+                                <span>•</span>
+                                <span>3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="images/trending 4.png" alt="GTA 6 thumbnail">
+                        <span class="video-duration">15:30</span>
+                        <div class="play-hover"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <div class="channel-logo">
+                            <img src="images/channel logo 4.jpg" alt="GameNews channel">
+                        </div>
+                        <div class="video-details">
+                            <h5 class="video-title">GTA 6: Everything We Know</h5>
+                            <p class="channel-name">GameNews</p>
+                            <div class="video-views">
+                                <span>320K views</span>
+                                <span>•</span>
+                                <span>5 hours ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--TOP (POPULAR) CREATORS SECTION-->
@@ -347,7 +354,7 @@
           <div class="col-6 col-md-3 col-lg-2">
               <div class="creator-card">
                   <div class="creator-icon">
-                    <img src="images/popular 1.jpg" alt="Content Creator icon">
+                    <img src="images/creator1.jpg" alt="CODbuddy">
                   </div>
                   <h5>CODbuddy</h5>
                   <p>10.8M Subscribers</p>
@@ -358,10 +365,10 @@
           <div class="col-6 col-md-3 col-lg-2">
             <div class="creator-card">
                 <div class="creator-icon">
-                  <img src="images/popular 1.jpg" alt="Content Creator icon">
+                  <img src="images/creator2.jpg" alt="SoulsMaster">
                 </div>
-                <h5>CODbuddy</h5>
-                <p>10.8M Subscribers</p>
+                <h5>SoulsMaster</h5>
+                <p>8.5M Subscribers</p>
                 <button class="btn subscribe-btn">Subscribe</button>
             </div>
         </div>
@@ -369,10 +376,10 @@
           <div class="col-6 col-md-3 col-lg-2">
               <div class="creator-card">
                   <div class="creator-icon">
-                    <img src="images/popular 1.jpg" alt="Content Creator icon">
+                    <img src="images/creator3.jpg" alt="ProGamer">
                   </div>
-                  <h5>CODbuddy</h5>
-                  <p>10.8M Subscribers</p>
+                  <h5>ProGamer</h5>
+                  <p>6.2M Subscribers</p>
                   <button class="btn subscribe-btn">Subscribe</button>
               </div>
           </div>
@@ -380,10 +387,10 @@
           <div class="col-6 col-md-3 col-lg-2">
             <div class="creator-card">
                 <div class="creator-icon">
-                  <img src="images/popular 1.jpg" alt="Content Creator icon">
+                  <img src="images/creator4.jpg" alt="GameNews">
                 </div>
-                <h5>CODbuddy</h5>
-                <p>10.8M Subscribers</p>
+                <h5>GameNews</h5>
+                <p>4.9M Subscribers</p>
                 <button class="btn subscribe-btn">Subscribe</button>
             </div>
           </div>
@@ -391,10 +398,10 @@
           <div class="col-6 col-md-3 col-lg-2">
             <div class="creator-card">
                 <div class="creator-icon">
-                  <img src="images/popular 1.jpg" alt="Content Creator icon">
+                  <img src="images/creator5.jpg" alt="TechGaming">
                 </div>
-                <h5>CODbuddy</h5>
-                <p>10.8M Subscribers</p>
+                <h5>TechGaming</h5>
+                <p>3.7M Subscribers</p>
                 <button class="btn subscribe-btn">Subscribe</button>
             </div>
           </div>
@@ -402,10 +409,10 @@
           <div class="col-6 col-md-3 col-lg-2">
             <div class="creator-card">
                 <div class="creator-icon">
-                  <img src="images/popular 1.jpg" alt="Content Creator icon">
+                  <img src="images/creator6.jpg" alt="RetroGamer">
                 </div>
-                <h5>CODbuddy</h5>
-                <p>10.8M Subscribers</p>
+                <h5>RetroGamer</h5>
+                <p>2.4M Subscribers</p>
                 <button class="btn subscribe-btn">Subscribe</button>
             </div>
           </div>

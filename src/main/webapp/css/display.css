@@ -1,0 +1,200 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header .mainlogo {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Video container styles */
+.video-container {
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000;
+}
+
+.video-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Button styles */
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6e8efb;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5d7de8;
+}
+
+/* Action buttons container */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    padding: 12px 24px;
+    background-color: #6e8efb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary {
+    padding: 12px 24px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #5d7de8;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .video-container {
+        width: 150px;
+        height: 90px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Animation for table rows */
+tr {
+    transition: transform 0.2s ease;
+}
+
+tr:hover {
+    transform: translateY(-2px);
+}
+
+/* Mature content indicator */
+td:nth-child(7) {
+    font-weight: bold;
+    color: #dc3545;
+}
+
+/* Description column */
+td:nth-child(4) {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Category and tags styling */
+td:nth-child(5), td:nth-child(6) {
+    color: #6c757d;
+    font-size: 0.9em;
+}
