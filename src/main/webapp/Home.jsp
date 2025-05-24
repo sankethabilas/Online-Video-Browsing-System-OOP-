@@ -16,6 +16,30 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+
+    <style>
+        .mature-warning {
+            background-color: #ff4444;
+            color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 2px solid #ff0000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .mature-warning strong {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .mature-warning p {
+            margin: 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 <body>
 
@@ -76,7 +100,7 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" >
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="slider-item" style="background-image: url('images/slider1.png')">
+              <div class="slider-item" style="background-image: url('images/slider1.jpeg')">
                 <div class="slider-content">
                     <span class="badge slider-badge">TRENDING</span>
                     <h2>Call of Duty: Black Ops 6 - Ultimate Guide</h2>
@@ -205,7 +229,7 @@
                     </div>
                     <div class="video-info">
                         <div class="channel-logo">
-                            <img src="images/channel logo 1.jpg" alt="Channel-logo">
+                            <img src="images/channel logo 2.jpeg" alt="Channel-logo">
                         </div>
                         <div class="video-details">
                             <h5 class="video-title">Call of Duty: Black Ops 6</h5>
@@ -223,7 +247,7 @@
                 <div class="col-md-6 col-lg-3 mb-4">
                   <div class="video-card">
                       <div class="video-thumbnail">
-                          <img src="images/trending 1.png" alt="video thumbnail image">
+                          <img src="images/trending 2.jpeg" alt="video thumbnail image">
                           <span class="video-duration">45.12</span>
                           <div class="play-hover"><i class="fas fa-play"></i></div>
                       </div>
@@ -247,13 +271,13 @@
                   <div class="col-md-6 col-lg-3 mb-4">
                     <div class="video-card">
                         <div class="video-thumbnail">
-                            <img src="images/trending 1.png" alt="video thumbnail image">
+                            <img src="images/trending 3.jpeg" alt="video thumbnail image">
                             <span class="video-duration">45.12</span>
                             <div class="play-hover"><i class="fas fa-play"></i></div>
                         </div>
                         <div class="video-info">
                             <div class="channel-logo">
-                                <img src="images/channel logo 1.jpg" alt="Channel-logo">
+                                <img src="images/channel logo 2.jpeg" alt="Channel-logo">
                             </div>
                             <div class="video-details">
                                 <h5 class="video-title">Call of Duty: Black Ops 6</h5>
@@ -271,7 +295,7 @@
                   <div class="col-md-6 col-lg-3 mb-4">
                       <div class="video-card">
                           <div class="video-thumbnail">
-                              <img src="images/trending 1.png" alt="video thumbnail image">
+                              <img src="images/trending 4.jpeg" alt="video thumbnail image">
                               <span class="video-duration">45.12</span>
                               <div class="play-hover"><i class="fas fa-play"></i></div>
                           </div>
@@ -319,7 +343,7 @@
           <div class="col-6 col-md-3 col-lg-2">
             <div class="creator-card">
                 <div class="creator-icon">
-                  <img src="images/popular 1.jpg" alt="Content Creator icon">
+                  <img src="images/popular 2.jpeg" alt="Content Creator icon">
                 </div>
                 <h5>CODbuddy</h5>
                 <p>10.8M Subscribers</p>
@@ -330,7 +354,7 @@
           <div class="col-6 col-md-3 col-lg-2">
               <div class="creator-card">
                   <div class="creator-icon">
-                    <img src="images/popular 1.jpg" alt="Content Creator icon">
+                    <img src="images/popular 3.jpeg" alt="Content Creator icon">
                   </div>
                   <h5>CODbuddy</h5>
                   <p>10.8M Subscribers</p>
@@ -341,7 +365,7 @@
           <div class="col-6 col-md-3 col-lg-2">
             <div class="creator-card">
                 <div class="creator-icon">
-                  <img src="images/popular 1.jpg" alt="Content Creator icon">
+                  <img src="images/popular 4.jpeg" alt="Content Creator icon">
                 </div>
                 <h5>CODbuddy</h5>
                 <p>10.8M Subscribers</p>
@@ -352,7 +376,7 @@
           <div class="col-6 col-md-3 col-lg-2">
             <div class="creator-card">
                 <div class="creator-icon">
-                  <img src="images/popular 1.jpg" alt="Content Creator icon">
+                  <img src="images/popular 5.jpeg" alt="Content Creator icon">
                 </div>
                 <h5>CODbuddy</h5>
                 <p>10.8M Subscribers</p>
@@ -386,13 +410,11 @@
     <div class="col-md-6 col-lg-3 mb-4">
       <div class="video-card">
         <div class="video-thumbnail">
-          <video width="100%" height="auto" controls preload="metadata">
-            <source src="${pageContext.request.contextPath}/videos/${videoFile}" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <!--
-          <span class="video-duration">--:--</span>
-          <div class="play-hover"><i class="fas fa-play"></i></div> -->
+            ${video.contentWarningDisplay}
+            <video width="100%" height="auto" controls preload="metadata">
+                <source src="${pageContext.request.contextPath}/videos/${videoFile}" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
         </div>
         
         

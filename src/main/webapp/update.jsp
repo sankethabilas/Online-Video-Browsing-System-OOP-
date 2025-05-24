@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+ <!-- make links dynamic and flexible, name of webapp root directory -->
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/style.css">
 <title>Update video details</title>
 
@@ -37,6 +38,8 @@
 </head>
 <body>
 
+	<!-- retrieve the values passed as query parameters in the URL -->
+
 	<%
 		String video_id = request.getParameter("video_id");
 		String title = request.getParameter("title");
@@ -46,6 +49,7 @@
 		String mature = request.getParameter("mature");
 	%>
 	
+	<!-- prints the video_id to the server console for debugging -->
 	<%
     System.out.println("JSP video_id from request parameter: " + video_id);
 	%>
@@ -65,6 +69,7 @@
 		  <div class="error-message" id="videoError"></div>
 		</div>
 
+		<!-- value="<%=title %> Pre-fills the field with the existing title from the URL parameter -->
         <!-- Video Title-->
         <label class="label" for="title">Video Title</label>
         <input type="text" id="title" name="title" placeholder="Enter your video title" required value="<%=title %>">
@@ -72,9 +77,10 @@
       
         <!-- Video Description -->
         <label class="label" for="description">Description</label>
-       <textarea id="description" name="description" rows="4" placeholder="Describe your video" required><%=description %></textarea>
+       	<textarea id="description" name="description" rows="4" placeholder="Describe your video" required><%=description %></textarea>
         <div class="error-message" id="descriptionError"></div>
       
+      	<!-- value="<%=title %> Pre-fills the field with the existing title from the URL parameter -->
         <!-- Video Category -->
         <label class="label" for="category">Video Category</label>
 		<select id="category" name="category" required>

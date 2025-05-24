@@ -25,6 +25,7 @@ public class UpdateServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		//get the data from update form
 		String video_id = request.getParameter("video_id");
 		String title = request.getParameter("title");
 		String description = request.getParameter("description");
@@ -38,6 +39,7 @@ public class UpdateServlet extends HttpServlet {
 			mature = "N";  // Not checked
 		}
 		
+		//update data using controller
 		boolean isTrue;
 		isTrue = VBSController. updateData(video_id,title,description,category,tags,mature);
 		

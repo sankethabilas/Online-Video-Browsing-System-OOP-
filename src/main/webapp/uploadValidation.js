@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+	// Get form elements by their IDs
 	const termsInput = document.getElementById('terms');
 	const form = document.getElementById('upload-video-form');
 	const descriptionInput = document.getElementById('description');
@@ -12,10 +13,14 @@ form.addEventListener('submit', function (e) {
 	let valid = true;
 
 	// Title validation
+	//get the values type in field using titleInput.value and remove spaces using trim>
 	if (titleInput.value.trim().length < 5) {
 		document.getElementById('titleError').textContent = "Title must be at least 5 characters.";
 		valid = false;
-	} else {
+	}else if(titleInput.value.trim().length > 100){
+		document.getElementById('titleError').textContent = "Title must be at least 100 characters.";
+		valid = false;
+	}else {
 		document.getElementById('titleError').textContent = "";
 	}
 
@@ -23,7 +28,12 @@ form.addEventListener('submit', function (e) {
 	if (descriptionInput.value.trim().length < 15) {
 		document.getElementById('descriptionError').textContent = "Description must be at least 15 characters.";
 		valid = false;
-	} else {
+	}else if(descriptionInput.value.trim().length > 200){
+		document.getElementById('descriptionError').textContent = "Description must not exceed 200 characters.";
+		valid = false;
+	} 
+	
+	else {
 		document.getElementById('descriptionError').textContent = "";
 	}
 

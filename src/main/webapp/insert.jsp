@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- make links dynamic and flexible, name of webapp root directory -->
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/style.css">
 	<meta charset="UTF-8">
 	<title>GameVids - Upload Your Gaming Videos</title>
@@ -16,6 +17,7 @@
   </header>
 
   <main>
+  	<!-- multipart tells browser to send video files properly -->
     <form action="InsertServlet" method="post" id="upload-video-form" enctype="multipart/form-data">
       
         <div class="form-list">

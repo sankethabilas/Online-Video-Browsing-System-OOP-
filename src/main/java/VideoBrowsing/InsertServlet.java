@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.nio.file.Paths;
 
+//tell the servlet it will handle file upload
 @MultipartConfig
 @WebServlet("/InsertServlet")
 public class InsertServlet extends HttpServlet {
@@ -20,6 +21,7 @@ public class InsertServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		try {
+			//get the file part from form
 			Part filePart = request.getPart("videoFile");
 			String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
 
@@ -61,10 +63,11 @@ public class InsertServlet extends HttpServlet {
 			
 			boolean isTrue;
 			
+			//call db controller method to isert the collected info
 			isTrue = VBSController.insertdata(videoFile,title,description,category,tags,mature);
 		
 			if(isTrue == true) {
-				String alertMessage = "Data insert successful. File saved at: " + finalPath;
+				String alertMessage = "Data insert successful";
 				response.getWriter().println("<script> alert('"+alertMessage+"'); window.location.href='GetAllServlet';</script>");
 			} else {
 				RequestDispatcher dis2 = request.getRequestDispatcher("wrong.jsp");

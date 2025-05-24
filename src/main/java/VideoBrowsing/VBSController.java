@@ -22,6 +22,7 @@ public class VBSController {
 	public static boolean insertdata(String videoFile, String title, String description, String category, String tags, String mature) throws SQLException {
 		String sql = "INSERT INTO videos (videoFile, title, description, category, tags, mature) VALUES (?, ?, ?, ?, ?, ?)";
 		
+		//create a database connection and SQL statement using try-with-resources to auto-close both
 		try (Connection con = DBConnection.getConnection();
 			 PreparedStatement pstmt = con.prepareStatement(sql)) {
 			
@@ -36,7 +37,7 @@ public class VBSController {
 			return rowsAffected > 0;
 			
 		} catch (SQLException e) {
-			throw e; // Propagate the exception to be handled by the servlet
+			throw e;
 		}
 	}
 	
@@ -46,6 +47,8 @@ public class VBSController {
 	
 	//display data function
 	
+	
+	//retrieve video details by video ID from the database
 	public static List<VBSModel> getById (String Video_id){
 		
 		int convertedID = Integer.parseInt(Video_id);
@@ -65,6 +68,7 @@ public class VBSController {
 			rs = stmt.executeQuery(sql);
 			
 			while(rs.next()) {
+				// Extract data from each column in the current row
 				int video_id = rs.getInt(1);
 				String videoFile = rs.getString(2);
 				String title = rs.getString(3);
@@ -73,6 +77,7 @@ public class VBSController {
 				String tags = rs.getString(6);
 				String mature = rs.getString(7);
 				
+				//Create a VBSModel object with the data
 				VBSModel vb = new VBSModel(video_id, videoFile, title, description,category, tags, mature);
 				VBS.add(vb);
 			}
@@ -88,27 +93,34 @@ public class VBSController {
 
 
 //get all data 
-public static List<VBSModel> getAllData() {
-	ArrayList<VBSModel> videoList = new ArrayList<>();
-	String sql = "SELECT * FROM videos";
 	
-	try (Connection con = DBConnection.getConnection();
-		 PreparedStatement stmt = con.prepareStatement(sql);
-		 ResultSet rs = stmt.executeQuery()) {
+	//retrieve all video records from the database
+	public static List<VBSModel> getAllData() {
+		//store all video records retrieved from the database
+		ArrayList<VBSModel> videoList = new ArrayList<>();
+		String sql = "SELECT * FROM videos";
 		
-		while(rs.next()) {
-			int video_id = rs.getInt("video_id");
-			String videoFile = rs.getString("videoFile");
-			String title = rs.getString("title");
-			String description = rs.getString("description");
-			String category = rs.getString("category");
-			String tags = rs.getString("tags");
-			String mature = rs.getString("mature");
+		// Use try-with-resources to auto-close Connection, PreparedStatement, and ResultSet
+		try (Connection con = DBConnection.getConnection();
+			 PreparedStatement stmt = con.prepareStatement(sql);
+			 ResultSet rs = stmt.executeQuery()) {
 			
-			VBSModel vb = new VBSModel(video_id, videoFile, title, description, category, tags, mature);
-			videoList.add(vb);
+			while(rs.next()) {
+				int video_id = rs.getInt("video_id");
+				String videoFile = rs.getString("videoFile");
+				String title = rs.getString("title");
+				String description = rs.getString("description");
+				String category = rs.getString("category");
+				String tags = rs.getString("tags");
+				String mature = rs.getString("mature");
+				
+				// Create a VBSModel object with the retrieved data
+				VBSModel vb = new VBSModel(video_id, videoFile, title, description, category, tags, mature);
+				videoList.add(vb);
 		}
+			
 	} catch(Exception e) {
+		// Handle any exceptions
 		e.printStackTrace();
 	}
 	
@@ -119,10 +131,12 @@ public static List<VBSModel> getAllData() {
 
 //updateing data
 
-public static boolean updateData(String video_id, String title, String description, String category, String tags, String mature) {
+	public static boolean updateData(String video_id, String title, String description, String category, String tags, String mature) {
     boolean isSuccess = false;
 
     try {
+    	
+    	// Establish a connection to the database
         con = DBConnection.getConnection();
         String sql = "UPDATE videos SET title = ?, description = ?, category = ?, tags = ?, mature = ? WHERE video_id = ?";
         PreparedStatement pstmt = con.prepareStatement(sql);
@@ -134,6 +148,7 @@ public static boolean updateData(String video_id, String title, String descripti
         pstmt.setString(5, mature);
         pstmt.setInt(6, Integer.parseInt(video_id));
 
+        // Execute the update query and get number of affected rows
         int rowsAffected = pstmt.executeUpdate();
         isSuccess = (rowsAffected > 0);
 
@@ -150,16 +165,19 @@ public static boolean updateData(String video_id, String title, String descripti
 
 //delete data
 
-public static boolean deletedata(String video_id) {
+	//Method to delete a video record from the 'videos' table
+	public static boolean deletedata(String video_id) {
 	int convID = Integer.parseInt(video_id);
 	
 	try {
 		//DBConnection
 		con=DBConnection.getConnection();
+		// Create a Statement object to execute the SQL command
 		stmt=con.createStatement();
 		
 		String sql = "delete from videos where video_id ='"+convID+"'";
 		
+		// Execute the delete query and get the number of affected rows
 		int rs = stmt.executeUpdate(sql);
 		if(rs>0) {
 			isSuccess =true;
