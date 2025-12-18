@@ -5,11 +5,13 @@ A modern, responsive web application for browsing and playing videos with a clea
 ## Features
 
 ### User Interface Components
-- Interactive navigation bar with search functionality
-- Responsive sidebar with categorized sections
-- Video grid with thumbnails and hover effects
-- Video player with controls and information display
-- Dark/light mode toggle
+- Interactive navigation bar with video search functionality  
+- Responsive sidebar with categorized gaming sections  
+- Video grid with thumbnails, hover effects, and reaction buttons (👍 ❤️ 👎)  
+- Integrated video player with playback controls and information display  
+- Playlist management interface to add, view, and organize saved videos  
+- Contact Support page for user inquiries and feedback  
+- Dark / light mode toggle for enhanced user experience  
 
 ### Interactive Features
 - Search with suggestions and history
